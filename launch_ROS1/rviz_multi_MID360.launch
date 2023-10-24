@@ -1,12 +1,11 @@
 <launch>
 
 	<node name="tf_livox_up" pkg="tf2_ros" type="static_transform_publisher" args="0.0242 0 0.0521 1.571 0 1.046 chassie livox_up"/>
-
 	<node name="tf_livox_down" pkg="tf2_ros" type="static_transform_publisher" args="0.0242 0 -0.0521 1.571 0 2.094 chassie livox_down"/>
 
 	<!--user configure parameters for ros start-->
 	<arg name="lvx_file_path" default="livox_test.lvx"/>
-	<arg name="bd_list" default="47MDL5S0010213"/>
+	<arg name="bd_list" default="100000000000000"/>
 	<arg name="xfer_format" default="0"/>
 	<arg name="multi_topic" default="1"/>
 	<arg name="data_src" default="0"/>

@@ -210,10 +210,7 @@ void Lddc::PublishPointcloud2(LidarDataQueue *queue, uint8_t index) {
     PointCloud2 cloud;
     uint64_t timestamp = 0;
     InitPointcloud2Msg(pkg, cloud, timestamp);
-    std::string frame_id;
     std::string ip_string = IpNumToString(lds_->lidars_[index].handle);
-    // snprintf(frame_id, sizeof(frame_id), "livox/lidar_%s",
-    //          ReplacePeriodByUnderline(ip_string).c_str());
     if (ip_string == "192.168.1.113") {
       cloud.header.frame_id.assign("livox_up");
     }
